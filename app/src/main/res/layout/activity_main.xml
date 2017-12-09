@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#263238"
+    tools:context="com.hmdroid.ultimatelauncher.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/textClock3"
+        android:layout_centerHorizontal="true"
+        android:background="#03A9F4"
+        android:orientation="vertical">
+
+        <TextClock
+            android:id="@+id/textClock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:textColor="@android:color/white"
+            android:textSize="35sp" />
+
+        <TextClock
+            android:id="@+id/textClock3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textClock"
+            android:layout_toEndOf="@+id/textClock"
+            android:format24Hour="M/dd (E)"
+            android:paddingLeft="10dp"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/dialer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButton3"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/transparent"
+        android:onClick="dialer"
+        android:paddingLeft="10dp"
+        app:srcCompat="@drawable/phone" />
+
+    <ImageButton
+        android:id="@+id/contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="65dp"
+        android:background="@android:color/transparent"
+        android:onClick="contacts"
+        android:paddingRight="10dp"
+        app:srcCompat="@drawable/contact" />
+
+    <TextView
+        android:id="@+id/tell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dialer"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="60dp"
+        android:text="電話"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/contacts"
+        android:layout_alignParentEnd="true"
+        android:paddingRight="55dp"
+        android:text="連絡先"
+        android:textSize="17sp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/dialer"
+        android:layout_below="@+id/textView3"
+        android:background="@android:color/transparent"
+        android:onClick="camera"
+        app:srcCompat="@drawable/camera" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageButton3"
+        android:layout_alignStart="@+id/imageButton3"
+        android:paddingLeft="45dp"
+        android:text="カメラ"
+        android:textSize="17sp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/contacts"
+        android:layout_below="@+id/contacts"
+        android:background="@android:color/transparent"
+        android:onClick="gallery"
+        app:srcCompat="@drawable/gallery" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageButton4"
+        android:layout_alignEnd="@+id/imageButton4"
+        android:paddingRight="40dp"
+        android:text="アルバム"
+        android:textSize="17sp" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageButton3"
+        android:layout_below="@+id/textView4"
+        android:background="@android:color/transparent"
+        android:onClick="mms"
+        app:srcCompat="@drawable/sms" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignStart="@+id/imageButton4"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/music" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageButton5"
+        android:layout_alignStart="@+id/imageButton5"
+        android:layout_marginStart="25dp"
+        android:text="メッセージ"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageButton6"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginStart="12dp"
+        android:text="音楽"
+        android:textSize="17sp" />
+
+    <ImageButton
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageButton5"
+        android:layout_below="@+id/textView6"
+        android:background="@android:color/transparent"
+        android:onClick="settings"
+        app:srcCompat="@drawable/setting" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/settings"
+        android:layout_alignStart="@+id/textView6"
+        android:text="電話の設定"
+        android:textSize="17sp" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageButton6"
+        android:layout_below="@+id/imageButton5"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/apps" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView8"
+        android:layout_alignBottom="@+id/textView8"
+        android:layout_alignStart="@+id/imageButton8"
+        android:layout_marginStart="21dp"
+        android:text="すべてのアプリ" />
+
+</RelativeLayout>
